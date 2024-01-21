@@ -1,8 +1,8 @@
-export default function Home() {
+export default function Page() {
   return (
     <section>
       <div>
-        <h1>Home</h1>
+        <h1>Projects</h1>
       </div>
     </section>
   );
