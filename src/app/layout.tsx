@@ -1,11 +1,12 @@
-import { GeistMono } from 'geist/font/mono';
-import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 
 import { Navbar } from '@/components/nav';
 import { cx } from '@/lib/utils';
 
 import './globals.css';
+
+const pixeloid = localFont({ src: '../../public/fonts/PixeloidSans.ttf' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://michaelebanks.com'),
@@ -31,8 +32,7 @@ export default function RootLayout({
       lang='en'
       className={cx(
         'text-black bg-white dark:text-white dark:bg-[#212121]',
-        GeistSans.variable,
-        GeistMono.variable
+        pixeloid.className
       )}
     >
       <body className='antialiased max-w-2xl mb-40 flex flex-col md:flex-row mx-4 mt-8 lg:mx-auto'>
