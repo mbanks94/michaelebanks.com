@@ -3,7 +3,7 @@ import { fetchRepositories } from '@/lib/data/repositories';
 import { Project } from './project';
 
 export async function Projects() {
-  const data = await fetchRepositories();
+  const data = await fetchRepositories('mbanks94');
 
   return (
     <div>

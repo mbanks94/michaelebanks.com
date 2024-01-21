@@ -30,7 +30,7 @@ export const GetRepositories = gql`
   }
 `;
 
-export const fetchRepositories = (username = 'mbanks94') => {
+export const fetchRepositories = (username: string) => {
   try {
     return client.request<RepoData>(GetRepositories, { username });
   } catch (error) {
