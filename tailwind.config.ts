@@ -24,13 +24,16 @@ export default {
           },
         },
       },
-      boxShadow: {
-        'project-card':
-          '15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60)',
-      },
       colors: {
         eerie: '#212121',
         ash: '#B1B6A6',
+        pumpkin: {
+          100: '#F6781E',
+          400: '#DF6108',
+        },
+      },
+      boxShadow: {
+        button: '0 0 0 3px #2f2e41, 0 6px 0 #2f2e41',
       },
       typography: {
         quoteless: {
