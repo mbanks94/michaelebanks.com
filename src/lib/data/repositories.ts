@@ -7,6 +7,7 @@ export type Repo = {
   id: string;
   name: string;
   description: string;
+  url: string;
 };
 
 export type RepoData = {
@@ -22,8 +23,10 @@ export const GetRepositories = gql`
     user(login: $username) {
       repositories(first: 10, ownerAffiliations: [OWNER], privacy: PUBLIC) {
         nodes {
+          id
           name
           description
+          url
         }
       }
     }

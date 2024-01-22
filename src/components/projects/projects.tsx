@@ -8,7 +8,7 @@ export async function Projects() {
   return (
     <ul className='flex flex-row flex-wrap gap-16'>
       {data?.user.repositories.nodes.map((repo) => (
-        <Project key={`${repo.id}-${repo.name}`} repo={repo} />
+        <Project key={repo.id} repo={repo} />
       ))}
     </ul>
   );

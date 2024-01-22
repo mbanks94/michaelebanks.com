@@ -9,7 +9,9 @@ export function Project({ repo }: { repo: Repo }) {
         <p className='mb-2 text-lg font-bold'>{repo.name}</p>
         <p>{repo.description}</p>
       </div>
-      <Button className='self-center'>View code</Button>
+      <Button className='self-center' url={repo.url}>
+        View code
+      </Button>
     </li>
   );
 }
