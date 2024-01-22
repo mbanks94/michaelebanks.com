@@ -8,6 +8,30 @@ export default {
   ],
   theme: {
     extend: {
+      animation: {
+        blink: 'blink 1s infinite both',
+      },
+      keyframes: {
+        blink: {
+          '0%': {
+            opacity: '0',
+          },
+          '30%': {
+            opacity: '1',
+          },
+          '100%': {
+            opacity: '0',
+          },
+        },
+      },
+      boxShadow: {
+        'project-card':
+          '15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(60, 60, 60)',
+      },
+      colors: {
+        eerie: '#212121',
+        ash: '#B1B6A6',
+      },
       typography: {
         quoteless: {
           css: {
