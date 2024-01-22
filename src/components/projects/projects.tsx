@@ -6,10 +6,10 @@ export async function Projects() {
   const data = await fetchRepositories('mbanks94');
 
   return (
-    <div>
+    <ul className='flex flex-row flex-wrap gap-16'>
       {data?.user.repositories.nodes.map((repo) => (
         <Project key={`${repo.id}-${repo.name}`} repo={repo} />
       ))}
-    </div>
+    </ul>
   );
 }
