@@ -1,6 +1,6 @@
 import { Repo } from '@/lib/data/repositories';
 
-import { Button } from '../button';
+import { Button } from './button';
 
 export function Project({ repo }: { repo: Repo }) {
   return (
