@@ -8,6 +8,12 @@ export type Repo = {
   name: string;
   description: string;
   url: string;
+  homepageUrl?: string;
+  languages: {
+    nodes: {
+      name: string;
+    }[];
+  };
 };
 
 export type RepoData = {
@@ -27,6 +33,12 @@ export const GetRepositories = gql`
           name
           description
           url
+          homepageUrl
+          languages(first: 3) {
+            nodes {
+              name
+            }
+          }
         }
       }
     }
@@ -34,6 +46,7 @@ export const GetRepositories = gql`
 `;
 
 export const fetchRepositories = (username: string) => {
+  if (!username) return;
   try {
     return client.request<RepoData>(GetRepositories, { username });
   } catch (error) {
