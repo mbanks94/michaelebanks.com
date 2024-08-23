@@ -3,6 +3,7 @@ import Link from 'next/link';
 const navItems = {
   '/': 'home',
   '/projects': 'projects',
+  '/resume': 'resume',
 };
 
 export function Navbar() {
