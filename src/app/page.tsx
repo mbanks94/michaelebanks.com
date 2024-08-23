@@ -7,7 +7,10 @@ export default function Home() {
     <section>
       <div>
         <h1>
-          <Typewriter text={`Hi, I'm Michael 👋`} delay={150} />
+          <Typewriter
+            text={`Hi, I'm Michael 👋 Welcome to my site.`}
+            delay={135}
+          />
         </h1>
       </div>
     </section>
